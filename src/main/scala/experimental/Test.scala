@@ -12,6 +12,7 @@ object Test extends App {
   val finder = ClassFinder()
   val classes = finder.getClasses
 
+  println(s"ClassFinder is searching on finder.classpath: ${finder.classpath}")
   println(s"There are ${classes.size} total classes")
 
   val subclasses1 = ClassFinder.concreteSubclasses(classOf[experimental.MyAbstractClass], classes).toList
